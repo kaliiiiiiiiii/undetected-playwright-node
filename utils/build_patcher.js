@@ -57,7 +57,7 @@ function patch_driver(path) {
   }`;
 
   if (!contextWorldFnMatches || contextWorldFnMatches.length !== 1) {
-    console.error(`Expected exactly one match for the "_context(world)" function definition in file "${framesFileText}" but got ${contextWorldFnMatches?.length ?? 0}`);
+    console.error(`Expected exactly one match for the "_context(world)" function definition in file "${frames_path}" but got ${contextWorldFnMatches?.length ?? 0}`);
     return;
   }
 
@@ -72,7 +72,7 @@ function patch_driver(path) {
         `;
 
   if (!onClearLifecycleMatches || onClearLifecycleMatches.length !== 1) {
-    console.error(`Expected exactly one match for the "_onClearLifecycle()" function definition in file "${framesFileText}" but got ${onClearLifecycleMatches?.length ?? 0}`);
+    console.error(`Expected exactly one match for the "_onClearLifecycle()" function definition in file "${frames_path}" but got ${onClearLifecycleMatches?.length ?? 0}`);
     return;
   }
 
